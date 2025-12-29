@@ -12,11 +12,11 @@ require_once 'config.php';
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <div class="dashboard-container">
-        <aside class="sidebar">
+    <aside class="sidebar">
             <div class="sidebar-header">
                 <div class="logo">
                     <i class="fas fa-chart-line"></i>
@@ -35,34 +35,32 @@ require_once 'config.php';
                         <i class="fas fa-chart-bar"></i>
                         <span>Phân tích</span>
                     </a>
-                    <a href="#" class="nav-item">
-                        <i class="fas fa-shopping-cart"></i>
-                        <span>Đơn hàng</span>
-                    </a>
-                    <a href="#" class="nav-item">
-                        <i class="fas fa-users"></i>
-                        <span>Khách hàng</span>
-                    </a>
-                    <a href="#" class="nav-item">
-                        <i class="fas fa-box"></i>
-                        <span>Sản phẩm</span>
-                    </a>
                 </div>
                 
                 <div class="nav-section">
                     <div class="nav-section-title">Quản lý</div>
-                    <a href="#" class="nav-item">
-                        <i class="fas fa-file-invoice"></i>
-                        <span>Báo cáo</span>
+                    <a href="orders.php" class="nav-item">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span>Đơn hàng</span>
+                        <span class="nav-badge"><?php echo $pending_orders; ?></span>
                     </a>
-                    <a href="#" class="nav-item">
-                        <i class="fas fa-cog"></i>
-                        <span>Cài đặt</span>
+                    <a href="customers.php" class="nav-item">
+                        <i class="fas fa-users"></i>
+                        <span>Khách hàng</span>
                     </a>
-                    <a href="profile.php" class="nav-item active">
-                        <i class="fas fa-user-circle"></i>
-                        <span>Hồ sơ</span>
+                    <a href="products.php" class="nav-item">
+                        <i class="fas fa-box"></i>
+                        <span>Sản phẩm</span>
                     </a>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-section-title">Khảo sát & Phân tích</div>
+                    <a href="surveys.php" class="nav-item"><i class="fas fa-poll"></i><span>Khảo sát khách hàng</span></a>
+                    <a href="attrition.php" class="nav-item"><i class="fas fa-chart-pie"></i><span>Phân tích rời bỏ</span></a>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-section-title">Trung tâm thông tin</div>
+                    <a href="profile.php" class="nav-item"><i class="fas fa-user-circle"></i><span>Hồ sơ</span></a>
                 </div>
             </nav>
         </aside>
@@ -186,6 +184,6 @@ require_once 'config.php';
         </main>
     </div>
     
-    <script src="assets/js/main.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

@@ -50,7 +50,7 @@ try {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quản lý Khách hàng - MSDB</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
@@ -139,7 +139,7 @@ try {
             
             <nav class="sidebar-nav">
                 <div class="nav-section">
-                    <div class="nav-section-title">MENU CHÍNH</div>
+                    <div class="nav-section-title">Menu chính</div>
                     <a href="index.php" class="nav-item">
                         <i class="fas fa-home"></i>
                         <span>Tổng quan</span>
@@ -151,10 +151,11 @@ try {
                 </div>
                 
                 <div class="nav-section">
-                    <div class="nav-section-title">QUẢN LÝ</div>
+                    <div class="nav-section-title">Quản lý</div>
                     <a href="orders.php" class="nav-item">
                         <i class="fas fa-shopping-cart"></i>
                         <span>Đơn hàng</span>
+                        <span class="nav-badge"><?php echo $pending_orders; ?></span>
                     </a>
                     <a href="customers.php" class="nav-item active">
                         <i class="fas fa-users"></i>
@@ -164,10 +165,15 @@ try {
                         <i class="fas fa-box"></i>
                         <span>Sản phẩm</span>
                     </a>
-                    <a href="profile.php" class="nav-item">
-                        <i class="fas fa-user"></i>
-                        <span>Hồ sơ</span>
-                    </a>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-section-title">Khảo sát & Phân tích</div>
+                    <a href="surveys.php" class="nav-item"><i class="fas fa-poll"></i><span>Khảo sát khách hàng</span></a>
+                    <a href="attrition.php" class="nav-item"><i class="fas fa-chart-pie"></i><span>Phân tích rời bỏ</span></a>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-section-title">Trung tâm thông tin</div>
+                    <a href="profile.php" class="nav-item"><i class="fas fa-user-circle"></i><span>Hồ sơ</span></a>
                 </div>
             </nav>
         </aside>
@@ -376,7 +382,7 @@ try {
         </div>
     </div>
 
-    <script src="assets/js/main.js"></script>
+    <script src="js/main.js"></script>
     <script>
         // Modal functions
         function openModal(modalId) {

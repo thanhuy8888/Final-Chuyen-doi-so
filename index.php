@@ -48,7 +48,7 @@ try {
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="css/style.css">
     
     <!-- Chart.js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
@@ -75,6 +75,10 @@ try {
                         <i class="fas fa-chart-bar"></i>
                         <span>Phân tích</span>
                     </a>
+                </div>
+                
+                <div class="nav-section">
+                    <div class="nav-section-title">Quản lý</div>
                     <a href="orders.php" class="nav-item">
                         <i class="fas fa-shopping-cart"></i>
                         <span>Đơn hàng</span>
@@ -89,21 +93,14 @@ try {
                         <span>Sản phẩm</span>
                     </a>
                 </div>
-                
                 <div class="nav-section">
-                    <div class="nav-section-title">Quản lý</div>
-                    <a href="#" class="nav-item">
-                        <i class="fas fa-file-invoice"></i>
-                        <span>Báo cáo</span>
-                    </a>
-                    <a href="#" class="nav-item">
-                        <i class="fas fa-cog"></i>
-                        <span>Cài đặt</span>
-                    </a>
-                    <a href="profile.php" class="nav-item">
-                        <i class="fas fa-user-circle"></i>
-                        <span>Hồ sơ</span>
-                    </a>
+                    <div class="nav-section-title">Khảo sát & Phân tích</div>
+                    <a href="surveys.php" class="nav-item"><i class="fas fa-poll"></i><span>Khảo sát khách hàng</span></a>
+                    <a href="attrition.php" class="nav-item"><i class="fas fa-chart-pie"></i><span>Phân tích rời bỏ</span></a>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-section-title">Trung tâm thông tin</div>
+                    <a href="profile.php" class="nav-item"><i class="fas fa-user-circle"></i><span>Hồ sơ</span></a>
                 </div>
             </nav>
         </aside>
@@ -379,6 +376,6 @@ try {
     </div>
     
     <!-- JavaScript -->
-    <script src="assets/js/main.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
